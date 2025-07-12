@@ -44,7 +44,7 @@ export default function Portfolio() {
 
       <section className="mb-12">
         <p className="text-lg max-w-3xl">
-          A developer with 4 years of experience in cloud-native architectures, automation, and backend systems.
+          A Software Developer with 4 years of experience in cloud-native architectures, automation, and backend systems.
           Specializes in AWS cloud development, Python scripting, system integrations, and scalable observability stacks.
           Passionate about building efficient systems and continuous learning.
         </p>
