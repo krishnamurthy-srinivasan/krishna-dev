@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Moon, Sun, Mail, Github, Linkedin } from 'lucide-react';
+import Typewriter from 'typewriter-effect';
 
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(true);
@@ -11,7 +12,18 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-white text-black dark:bg-black dark:text-white px-6 py-10">
       <header className="flex justify-between items-center mb-10">
-        <h1 className="text-3xl font-bold">Krishna Murthy Srinivasan</h1>
+        <div>
+          <p className="text-xl mb-1">Hi There! This is</p>
+          <h1 className="text-3xl font-bold">
+            <Typewriter
+              options={{
+                strings: ['Krishna Murthy Srinivasan'],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </h1>
+        </div>
         <button
           className="p-2 rounded-full bg-gray-200 dark:bg-gray-800"
           onClick={() => setDarkMode(!darkMode)}
@@ -27,10 +39,10 @@ export default function Portfolio() {
           Passionate about building efficient systems and continuous learning.
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
-          <span className="bg-green-600 text-white px-3 py-1 rounded transition duration-300 ease-in-out hover:bg-yellow-500">Open to Work</span>
-          <span className="bg-blue-900 text-white px-3 py-1 rounded transition duration-300 ease-in-out hover:bg-blue-700">SDE2 @Autodesk</span>
-          <span className="bg-blue-600 text-white px-3 py-1 rounded transition duration-300 ease-in-out hover:bg-blue-500">Open to Freelancing / Consulting</span>
-          <span className="bg-orange-700 text-white px-3 py-1 rounded transition duration-300 ease-in-out hover:bg-orange-600">Learning new tools regularly</span>
+          <span className="bg-green-600 text-white px-3 py-1 rounded shadow-md transition duration-300 ease-in-out hover:bg-yellow-500">Open to Work</span>
+          <span className="bg-blue-900 text-white px-3 py-1 rounded shadow-md transition duration-300 ease-in-out hover:bg-blue-700">SDE2 @Autodesk</span>
+          <span className="bg-blue-600 text-white px-3 py-1 rounded shadow-md transition duration-300 ease-in-out hover:bg-blue-500">Open to Freelancing / Consulting</span>
+          <span className="bg-orange-700 text-white px-3 py-1 rounded shadow-md transition duration-300 ease-in-out hover:bg-orange-600">Learning new tools regularly</span>
         </div>
       </section>
 
