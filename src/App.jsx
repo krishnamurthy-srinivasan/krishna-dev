@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Moon, Sun, Mail, Github, Linkedin } from 'lucide-react';
+import { Moon, Sun, Mail, Github, Linkedin, FileText } from 'lucide-react';
 import Typewriter from 'typewriter-effect';
 
 export default function Portfolio() {
