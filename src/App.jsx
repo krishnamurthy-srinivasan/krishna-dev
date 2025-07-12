@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Moon, Sun, Mail, Github, Linkedin, Twitter } from 'lucide-react';
+import { Moon, Sun, Mail, Github, Linkedin } from 'lucide-react';
 
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(true);
@@ -104,9 +104,14 @@ export default function Portfolio() {
         <div className="flex gap-6 mt-8 text-lg">
           <a href="https://www.linkedin.com/in/krishnamurthy-awsdeveloper" target="_blank" className="flex items-center gap-2 text-blue-500"><Linkedin size={20} />LinkedIn</a>
           <a href="mailto:harikrishnachn@gmail.com" className="flex items-center gap-2 text-red-500"><Mail size={20} />Gmail</a>
-          <a href="https://medium.com/@harikrishnachn" target="_blank" className="flex items-center gap-2 text-gray-800 dark:text-gray-200"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/medium.svg" alt="Medium" className="w-5 h-5" />Medium</a>
+          <a href="https://medium.com/@harikrishnachn" target="_blank" className="flex items-center gap-2 text-black dark:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1043.63 592.71" className="w-5 h-5 fill-current">
+              <path d="M588.67 296.32c0 163.61-131.64 296.32-294.34 296.32S0 459.93 0 296.32 131.64 0 294.34 0s294.33 132.71 294.33 296.32zm330.35 0c0 153.75-66.73 278.5-149.06 278.5s-149.06-124.75-149.06-278.5 66.73-278.5 149.06-278.5 149.06 124.75 149.06 278.5zm124.61 0c0 142.94-29.29 258.84-65.44 258.84s-65.44-115.9-65.44-258.84 29.29-258.84 65.44-258.84 65.44 115.9 65.44 258.84z"/>
+            </svg>
+            Medium
+          </a>
           <a href="https://github.com/krishnamurthy-srinivasan" target="_blank" className="flex items-center gap-2 text-black dark:text-white"><Github size={20} />GitHub</a>
-          <a href="#" className="flex items-center gap-2 text-blue-400"><Twitter size={20} />X</a>
+          <a href="#" className="flex items-center gap-2 text-black dark:text-white font-semibold">X</a>
         </div>
       </section>
 
