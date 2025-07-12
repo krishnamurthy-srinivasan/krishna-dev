@@ -48,7 +48,7 @@ export default function Portfolio() {
           <a
             href="/Krishna_Murthy_Srinivasan_Resume.pdf"
             download
-            className="flex items-center gap-2 bg-green-800 text-white px-5 py-3 rounded-full shadow-lg hover:bg-green-700 transition"
+            className="animate-pulse flex items-center gap-2 bg-green-800 text-white px-5 py-3 rounded-full shadow-lg hover:bg-green-700 transition"
           >
             <FileText size={20} /> Resume
           </a>
