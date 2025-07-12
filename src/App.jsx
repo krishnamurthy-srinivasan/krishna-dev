@@ -10,16 +10,16 @@ export default function Portfolio() {
   }, [darkMode]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-gray-900 via-gray-300 to-gray-100 bg-[length:400%_400%] animate-gradient text-black dark:text-white px-6 py-10 relative overflow-hidden">
-      <div className="max-w-5xl mx-auto">
+    <div className="relative min-h-screen overflow-hidden text-black dark:text-white px-6 py-10 bg-white dark:bg-black">
+      {/* Wave Background */}
+      <div className="absolute inset-0 z-0 before:absolute before:inset-0 before:bg-[url('/wave-light.svg')] dark:before:bg-[url('/wave-dark.svg')] before:bg-repeat before:bg-[length:400%_400%] before:animate-wave opacity-20" />
+
+      {/* Main Content */}
+      <div className="relative z-10 max-w-5xl mx-auto">
         <header className="flex justify-between items-center mb-10 flex-wrap md:flex-nowrap gap-6">
-          <div>
-            <img
-              src="/profile.jpg"
-              alt="Profile"
-              className="w-28 h-28 rounded-xl mb-4 shadow-lg shadow-black/40 dark:shadow-white/20"
-            />
-            <p className="text-xl mb-1">Hi There! This is</p>
+          {/* Left Section: Intro */}
+          <div className="flex flex-col justify-center gap-2 flex-1">
+            <p className="text-xl">Hi There! This is</p>
             <h1 className="text-3xl font-bold">
               <Typewriter
                 options={{
@@ -31,31 +31,49 @@ export default function Portfolio() {
             </h1>
             <a
               href="#contact"
-              className="mt-4 inline-flex items-center gap-2 text-blue-600 hover:underline text-lg font-medium"
+              className="mt-2 inline-flex items-center gap-2 text-blue-600 hover:underline text-lg font-medium"
             >
               Let's Connect <ArrowDownCircle size={20} />
             </a>
           </div>
-          <button
-            className="p-2 rounded-full bg-gray-200 dark:bg-gray-800"
-            onClick={() => setDarkMode(!darkMode)}
-          >
-            {darkMode ? <Sun /> : <Moon />}
-          </button>
+
+          {/* Center: Profile Image */}
+          <div className="flex-shrink-0">
+            <img
+              src="/profile.jpg"
+              alt="Profile"
+              className="w-28 h-28 rounded-full shadow-lg shadow-black/30 dark:shadow-white/20"
+            />
+          </div>
+
+          {/* Right: Theme Toggle */}
+          <div className="flex-shrink-0">
+            <button
+              className="p-2 rounded-full bg-gray-200 dark:bg-gray-800"
+              onClick={() => setDarkMode(!darkMode)}
+            >
+              {darkMode ? <Sun /> : <Moon />}
+            </button>
+          </div>
         </header>
 
+        {/* Intro Paragraph */}
         <section className="mb-12">
           <p className="text-lg max-w-3xl">
             Software Developer with 4 years of experience in cloud-native architectures, automation, and backend systems.
             Specializes in AWS cloud development, Python scripting, system integrations, and scalable observability stacks.
             Passionate about building efficient systems and continuous learning.
           </p>
+
+          {/* Tags */}
           <div className="mt-4 flex flex-wrap gap-2">
-            <span className="bg-green-600 text-white px-3 py-1 rounded shadow-[0_4px_10px_rgba(34,197,94,0.5)] hover:bg-yellow-500">Open to Work</span>
-            <span className="bg-blue-900 text-white px-3 py-1 rounded shadow-[0_4px_10px_rgba(30,64,175,0.5)] hover:bg-blue-700">SDE2 @Autodesk</span>
-            <span className="bg-blue-600 text-white px-3 py-1 rounded shadow-[0_4px_10px_rgba(37,99,235,0.5)] hover:bg-blue-500">Open to Freelancing / Consulting</span>
-            <span className="bg-orange-700 text-white px-3 py-1 rounded shadow-[0_4px_10px_rgba(194,65,12,0.5)] hover:bg-orange-600">Learning new tools regularly</span>
+            <span className="bg-green-600 text-white px-3 py-1 rounded shadow hover:bg-yellow-500">Open to Work</span>
+            <span className="bg-blue-900 text-white px-3 py-1 rounded shadow hover:bg-blue-700">SDE2 @Autodesk</span>
+            <span className="bg-blue-600 text-white px-3 py-1 rounded shadow hover:bg-blue-500">Open to Freelancing / Consulting</span>
+            <span className="bg-orange-700 text-white px-3 py-1 rounded shadow hover:bg-orange-600">Learning new tools regularly</span>
           </div>
+
+          {/* Resume Download */}
           <div className="mt-6 fixed bottom-8 right-8 z-50">
             <a
               href="/Krishna_Murthy_Srinivasan_Resume.pdf"
@@ -67,6 +85,7 @@ export default function Portfolio() {
           </div>
         </section>
 
+        {/* Projects Placeholder */}
         <section className="mb-16">
           <h2 className="text-2xl font-semibold mb-6">Recent Projects</h2>
           <p className="text-gray-400 italic">
@@ -74,6 +93,7 @@ export default function Portfolio() {
           </p>
         </section>
 
+        {/* Skills */}
         <section className="mb-16">
           <h2 className="text-2xl font-semibold mb-6">Skills</h2>
           <div className="flex flex-wrap gap-2">
@@ -89,6 +109,7 @@ export default function Portfolio() {
           </div>
         </section>
 
+        {/* Experience */}
         <section className="mb-16">
           <h2 className="text-2xl font-semibold mb-6">Work Experience</h2>
           <div className="space-y-6">
@@ -126,6 +147,7 @@ export default function Portfolio() {
           </div>
         </section>
 
+        {/* Contact */}
         <section id="contact" className="mb-16">
           <div className="flex flex-wrap justify-center gap-6 mt-8 text-lg">
             <a href="https://www.linkedin.com/in/krishnamurthy-awsdeveloper" target="_blank" className="text-blue-500 hover:scale-110 transition-transform"><Linkedin size={28} /></a>
