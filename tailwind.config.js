@@ -5,13 +5,14 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-8px)' },
-        }
+        fadeInOut: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '50%': { opacity: '1', transform: 'translateY(0)' },
+          '100%': { opacity: '0', transform: 'translateY(-20px)' },
+        },
       },
       animation: {
-        float: 'float 4s ease-in-out infinite',
+        fadeInOut: 'fadeInOut 2.5s ease-in-out forwards',
       },
     },
   },
