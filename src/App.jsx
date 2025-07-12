@@ -11,6 +11,8 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-white text-black dark:bg-black dark:text-white px-6 py-10">
+      <div className="fixed top-[-150px] left-[-150px] w-[300px] h-[300px] bg-purple-400 dark:bg-indigo-500 rounded-full blur-3xl opacity-20 -z-10" />
+      <div className="fixed bottom-[-150px] right-[-150px] w-[300px] h-[300px] bg-pink-300 dark:bg-yellow-400 rounded-full blur-3xl opacity-20 -z-10" />
       <header className="flex justify-between items-center mb-10">
         <div>
           <img
