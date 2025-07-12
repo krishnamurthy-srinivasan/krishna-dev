@@ -12,6 +12,9 @@ module.exports = {
       animation: {
         float: 'float 3s ease-in-out infinite',
       },
+      blur: {
+        '3xl': '64px', // ensure this exists
+      },
     }
   },
   plugins: [],
