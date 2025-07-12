@@ -13,6 +13,11 @@ export default function Portfolio() {
     <div className="min-h-screen bg-white text-black dark:bg-black dark:text-white px-6 py-10">
       <header className="flex justify-between items-center mb-10">
         <div>
+          <img
+            src="/profile.jpg"
+            alt="Profile"
+            className="w-28 h-28 rounded-full border-4 border-blue-600 shadow-md mb-4 animate-[wiggle_3s_ease-in-out_infinite]"
+          />
           <p className="text-xl mb-1">Hi There! This is</p>
           <h1 className="text-3xl font-bold">
             <Typewriter
