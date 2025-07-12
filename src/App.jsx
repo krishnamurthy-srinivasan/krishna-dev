@@ -12,7 +12,7 @@ export default function Portfolio() {
   return (
     <div className="relative min-h-screen overflow-hidden text-black dark:text-white px-6 py-10 bg-white dark:bg-black">
       {/* Wave Background */}
-      <div className="absolute inset-0 z-0 before:absolute before:inset-0 before:bg-[url('/wave-light.svg')] dark:before:bg-[url('/wave-dark.svg')] before:bg-repeat before:bg-[length:400%_400%] before:animate-wave opacity-20" />
+      <div className="absolute inset-0 z-0 before:absolute before:inset-0 before:bg-[url('/wave-dark.svg')] dark:before:bg-[url('/wave-light.svg')] before:bg-repeat before:bg-[length:400%_400%] before:animate-wave opacity-20" />
 
       {/* Main Content */}
       <div className="relative z-10 max-w-5xl mx-auto">
