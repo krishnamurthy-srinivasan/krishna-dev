@@ -44,6 +44,15 @@ export default function Portfolio() {
           <span className="bg-blue-600 text-white px-3 py-1 rounded shadow-[0_4px_10px_rgba(37,99,235,0.5)] transition duration-300 ease-in-out hover:bg-blue-500">Open to Freelancing / Consulting</span>
           <span className="bg-orange-700 text-white px-3 py-1 rounded shadow-[0_4px_10px_rgba(194,65,12,0.5)] transition duration-300 ease-in-out hover:bg-orange-600">Learning new tools regularly</span>
         </div>
+        <div className="mt-6">
+          <a
+            href="/Krishna_Murthy_Srinivasan_Resume.pdf"
+            download
+            className="inline-block bg-gray-800 text-white px-5 py-2 rounded shadow hover:bg-gray-700 transition"
+          >
+            Download Resume
+          </a>
+        </div>
       </section>
 
       <nav className="flex gap-6 text-lg font-semibold mb-10">
