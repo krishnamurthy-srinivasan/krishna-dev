@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Moon, Sun, Mail, Github, Linkedin, FileText } from 'lucide-react';
+import { Moon, Sun, Mail, Github, Linkedin, FileText, ArrowDownCircle } from 'lucide-react';
 import Typewriter from 'typewriter-effect';
 
 export default function Portfolio() {
@@ -55,10 +55,27 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <nav className="flex gap-6 text-lg font-semibold mb-10">
-        <a className="underline underline-offset-4 decoration-2 decoration-white dark:decoration-gray-700">Projects</a>
-        <a href="#contact">Contact me</a>
-      </nav>
+      <section className="mb-16">
+        <h2 className="text-2xl font-semibold mb-6">Recent Projects</h2>
+        <p className="text-gray-400 italic">
+          Coming soon… currently working on exciting automation and AWS-based infrastructure projects.
+        </p>
+      </section>
+
+      <section className="mb-16">
+        <h2 className="text-2xl font-semibold mb-6">Skills</h2>
+        <div className="flex flex-wrap gap-2">
+          {[
+            'Python', 'AWS', 'Docker', 'Kubernetes', 'Lambda', 'API Gateway', 'PostgreSQL', 'Cassandra',
+            'Airflow', 'Grafana', 'Prometheus', 'Power Automate', 'FastAPI', 'Flask', 'Helm', 'Kafka',
+            'PySpark', 'Git/Github'
+          ].map(skill => (
+            <span key={skill} className="bg-gray-200 dark:bg-gray-800 text-sm px-3 py-1 rounded">
+              {skill}
+            </span>
+          ))}
+        </div>
+      </section>
 
       <section className="mb-16">
         <h2 className="text-2xl font-semibold mb-6">Work Experience</h2>
@@ -97,24 +114,8 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section className="mb-16">
-        <h2 className="text-2xl font-semibold mb-6">Skills</h2>
-        <div className="flex flex-wrap gap-2">
-          {['Python', 'AWS', 'Docker', 'Kubernetes', 'Lambda', 'API Gateway', 'PostgreSQL', 'Cassandra', 'Airflow', 'Grafana', 'Prometheus', 'Power Automate', 'FastAPI', 'Flask', 'Helm', 'Kafka', 'PySpark', 'Git/Github'].map(skill => (
-            <span key={skill} className="bg-gray-200 dark:bg-gray-800 text-sm px-3 py-1 rounded">
-              {skill}
-            </span>
-          ))}
-        </div>
-      </section>
-
-      <section className="mb-16">
-        <h2 className="text-2xl font-semibold mb-6">Recent Projects</h2>
-        <p className="text-gray-400 italic">Coming soon… currently working on exciting automation and AWS-based infrastructure projects.</p>
-      </section>
-
       <section id="contact" className="mb-16">
-        <h2 className="text-2xl font-semibold mb-4">Contact Me</h2>
+        <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">Let's Connect <ArrowDownCircle size={24} /></h2>
         <form className="flex flex-col gap-4 max-w-xl">
           <input className="px-4 py-2 border dark:border-gray-700 rounded bg-white dark:bg-black" type="text" placeholder="Your Name" required />
           <input className="px-4 py-2 border dark:border-gray-700 rounded bg-white dark:bg-black" type="email" placeholder="Your Email" required />
@@ -122,17 +123,16 @@ export default function Portfolio() {
           <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" type="submit">Send Message</button>
         </form>
 
-        <div className="flex gap-6 mt-8 text-lg">
-          <a href="https://www.linkedin.com/in/krishnamurthy-awsdeveloper" target="_blank" className="flex items-center gap-2 text-blue-500"><Linkedin size={20} />LinkedIn</a>
-          <a href="mailto:harikrishnachn@gmail.com" className="flex items-center gap-2 text-red-500"><Mail size={20} />Gmail</a>
-          <a href="https://medium.com/@harikrishnachn" target="_blank" className="flex items-center gap-2 text-black dark:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1043.63 592.71" className="w-5 h-5 fill-current">
-              <path d="M588.67 296.32c0 163.61-131.64 296.32-294.34 296.32S0 459.93 0 296.32 131.64 0 294.34 0s294.33 132.71 294.33 296.32zm330.35 0c0 153.75-66.73 278.5-149.06 278.5s-149.06-124.75-149.06-278.5 66.73-278.5 149.06-278.5 149.06 124.75 149.06 278.5zm124.61 0c0 142.94-29.29 258.84-65.44 258.84s-65.44-115.9-65.44-258.84 29.29-258.84 65.44-258.84 65.44 115.9 65.44 258.84z"/>
+        <div className="flex flex-wrap justify-center gap-6 mt-8 text-lg">
+          <a href="https://www.linkedin.com/in/krishnamurthy-awsdeveloper" target="_blank" className="text-blue-500"><Linkedin size={28} /></a>
+          <a href="mailto:harikrishnachn@gmail.com" className="text-red-500"><Mail size={28} /></a>
+          <a href="https://medium.com/@harikrishnachn" target="_blank" className="text-black dark:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1043.63 592.71" className="w-7 h-7 fill-current">
+              <path d="M588.67 296.32c0 163.61-131.64 296.32-294.34 296.32S0 459.93 0 296.32 131.64 0 294.34 0s294.33 132.71 294.33 296.32zm330.35 0c0 153.75-66.73 278.5-149.06 278.5s-149.06-124.75-149.06-278.5 66.73-278.5 149.06-278.5 149.06 124.75 149.06 278.5zm124.61 0c0 142.94-29.29 258.84-65.44 258.84s-65.44-115.9-65.44-258.84 29.29-258.84 65.44-258.84 65.44 115.9 65.44 258.84z" />
             </svg>
-            Medium
           </a>
-          <a href="https://github.com/krishnamurthy-srinivasan" target="_blank" className="flex items-center gap-2 text-black dark:text-white"><Github size={20} />GitHub</a>
-          <a href="#" className="flex items-center gap-2 text-black dark:text-white font-semibold">X</a>
+          <a href="https://github.com/krishnamurthy-srinivasan" target="_blank" className="text-black dark:text-white"><Github size={28} /></a>
+          <a href="#" className="text-black dark:text-white font-semibold">X</a>
         </div>
       </section>
 
