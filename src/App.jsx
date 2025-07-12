@@ -10,18 +10,14 @@ export default function Portfolio() {
   }, [darkMode]);
 
   return (
-    <div className="min-h-screen bg-white text-black dark:bg-black dark:text-white px-6 py-10 relative overflow-hidden">
-      {/* Glowing Background Circles */}
-      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-purple-400 dark:bg-indigo-600 rounded-full blur-[100px] opacity-30 -z-10 animate-blob" />
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-pink-300 dark:bg-yellow-300 rounded-full blur-[100px] opacity-30 -z-10 animate-blob" />
-
+    <div className="min-h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400 bg-[length:400%_400%] animate-gradient text-black dark:text-white px-6 py-10 relative">
       <div className="max-w-5xl mx-auto">
-        <header className="flex justify-between items-center mb-10">
-          <div>
+        <header className="flex justify-between items-center mb-10 flex-wrap gap-6">
+          <div className="flex-shrink-0">
             <img
               src="/profile.jpg"
               alt="Profile"
-              className="w-28 h-28 rounded-xl mb-4 animate-float shadow-lg shadow-black/40 dark:shadow-white/20"
+              className="w-28 h-28 rounded-xl mb-4 shadow-lg shadow-black/40 dark:shadow-white/20"
             />
             <p className="text-xl mb-1">Hi There! This is</p>
             <h1 className="text-3xl font-bold">
@@ -35,7 +31,7 @@ export default function Portfolio() {
             </h1>
             <a
               href="#contact"
-              className="mt-4 inline-flex items-center gap-2 text-blue-600 hover:underline text-lg font-medium"
+              className="mt-4 inline-flex items-center gap-2 text-blue-800 dark:text-blue-300 hover:underline text-lg font-medium"
             >
               Let's Connect <ArrowDownCircle size={20} />
             </a>
@@ -55,16 +51,16 @@ export default function Portfolio() {
             Passionate about building efficient systems and continuous learning.
           </p>
           <div className="mt-4 flex flex-wrap gap-2">
-            <span className="bg-green-600 text-white px-3 py-1 rounded shadow-[0_4px_10px_rgba(34,197,94,0.5)] transition duration-300 ease-in-out hover:bg-yellow-500">Open to Work</span>
-            <span className="bg-blue-900 text-white px-3 py-1 rounded shadow-[0_4px_10px_rgba(30,64,175,0.5)] transition duration-300 ease-in-out hover:bg-blue-700">SDE2 @Autodesk</span>
-            <span className="bg-blue-600 text-white px-3 py-1 rounded shadow-[0_4px_10px_rgba(37,99,235,0.5)] transition duration-300 ease-in-out hover:bg-blue-500">Open to Freelancing / Consulting</span>
-            <span className="bg-orange-700 text-white px-3 py-1 rounded shadow-[0_4px_10px_rgba(194,65,12,0.5)] transition duration-300 ease-in-out hover:bg-orange-600">Learning new tools regularly</span>
+            <span className="bg-green-600 text-white px-3 py-1 rounded shadow-[0_4px_10px_rgba(34,197,94,0.5)] hover:bg-yellow-500">Open to Work</span>
+            <span className="bg-blue-900 text-white px-3 py-1 rounded shadow-[0_4px_10px_rgba(30,64,175,0.5)] hover:bg-blue-700">SDE2 @Autodesk</span>
+            <span className="bg-blue-600 text-white px-3 py-1 rounded shadow-[0_4px_10px_rgba(37,99,235,0.5)] hover:bg-blue-500">Open to Freelancing / Consulting</span>
+            <span className="bg-orange-700 text-white px-3 py-1 rounded shadow-[0_4px_10px_rgba(194,65,12,0.5)] hover:bg-orange-600">Learning new tools regularly</span>
           </div>
           <div className="mt-6 fixed bottom-8 right-8 z-50">
             <a
               href="/Krishna_Murthy_Srinivasan_Resume.pdf"
               download
-              className="animate-pulse flex items-center gap-2 bg-green-800 text-white px-5 py-3 rounded-full shadow-lg hover:bg-green-700 transition"
+              className="animate-pulse flex items-center gap-2 bg-green-800 text-white px-5 py-3 rounded-full shadow-lg hover:bg-green-700"
             >
               <FileText size={20} /> Resume
             </a>
@@ -73,7 +69,7 @@ export default function Portfolio() {
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold mb-6">Recent Projects</h2>
-          <p className="text-gray-400 italic">
+          <p className="text-gray-700 dark:text-gray-300 italic">
             Coming soon… currently working on exciting automation and AWS-based infrastructure projects.
           </p>
         </section>
@@ -81,11 +77,9 @@ export default function Portfolio() {
         <section className="mb-16">
           <h2 className="text-2xl font-semibold mb-6">Skills</h2>
           <div className="flex flex-wrap gap-2">
-            {[
-              'Python', 'AWS', 'Docker', 'Kubernetes', 'Lambda', 'API Gateway', 'PostgreSQL', 'Cassandra',
+            {[ 'Python', 'AWS', 'Docker', 'Kubernetes', 'Lambda', 'API Gateway', 'PostgreSQL', 'Cassandra',
               'Airflow', 'Grafana', 'Prometheus', 'Power Automate', 'FastAPI', 'Flask', 'Helm', 'Kafka',
-              'PySpark', 'Git/Github'
-            ].map(skill => (
+              'PySpark', 'Git/Github' ].map(skill => (
               <span key={skill} className="bg-gray-200 dark:bg-gray-800 text-sm px-3 py-1 rounded">
                 {skill}
               </span>
