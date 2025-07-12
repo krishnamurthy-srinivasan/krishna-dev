@@ -1,18 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}", // Adjust this if your components are in a different folder
+    "./public/index.html"
+  ],
   darkMode: 'class',
   theme: {
     extend: {
-      keyframes: {
-        fadeInOut: {
-          '0%': { opacity: '0', transform: 'translateY(20px)' },
-          '50%': { opacity: '1', transform: 'translateY(0)' },
-          '100%': { opacity: '0', transform: 'translateY(-20px)' },
-        },
-      },
       animation: {
-        fadeInOut: 'fadeInOut 2.5s ease-in-out forwards',
+        wave: 'waveAnimation 10s ease-in-out infinite',
+      },
+      keyframes: {
+        waveAnimation: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
       },
     },
   },
