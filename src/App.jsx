@@ -23,6 +23,9 @@ export default function Portfolio() {
               }}
             />
           </h1>
+          <a href="#contact" className="mt-4 inline-flex items-center gap-2 text-blue-600 hover:underline text-lg font-medium">
+            Let's Connect <ArrowDownCircle size={20} />
+          </a>
         </div>
         <button
           className="p-2 rounded-full bg-gray-200 dark:bg-gray-800"
@@ -115,24 +118,16 @@ export default function Portfolio() {
       </section>
 
       <section id="contact" className="mb-16">
-        <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">Let's Connect <ArrowDownCircle size={24} /></h2>
-        <form className="flex flex-col gap-4 max-w-xl">
-          <input className="px-4 py-2 border dark:border-gray-700 rounded bg-white dark:bg-black" type="text" placeholder="Your Name" required />
-          <input className="px-4 py-2 border dark:border-gray-700 rounded bg-white dark:bg-black" type="email" placeholder="Your Email" required />
-          <textarea className="px-4 py-2 border dark:border-gray-700 rounded bg-white dark:bg-black" rows="4" placeholder="Your Message" required></textarea>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" type="submit">Send Message</button>
-        </form>
-
         <div className="flex flex-wrap justify-center gap-6 mt-8 text-lg">
-          <a href="https://www.linkedin.com/in/krishnamurthy-awsdeveloper" target="_blank" className="text-blue-500"><Linkedin size={28} /></a>
-          <a href="mailto:harikrishnachn@gmail.com" className="text-red-500"><Mail size={28} /></a>
-          <a href="https://medium.com/@harikrishnachn" target="_blank" className="text-black dark:text-white">
+          <a href="https://www.linkedin.com/in/krishnamurthy-awsdeveloper" target="_blank" className="text-blue-500 hover:scale-110 transition-transform"><Linkedin size={28} /></a>
+          <a href="mailto:harikrishnachn@gmail.com" className="text-red-500 hover:scale-110 transition-transform"><Mail size={28} /></a>
+          <a href="https://medium.com/@harikrishnachn" target="_blank" className="text-black dark:text-white hover:scale-110 transition-transform">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1043.63 592.71" className="w-7 h-7 fill-current">
               <path d="M588.67 296.32c0 163.61-131.64 296.32-294.34 296.32S0 459.93 0 296.32 131.64 0 294.34 0s294.33 132.71 294.33 296.32zm330.35 0c0 153.75-66.73 278.5-149.06 278.5s-149.06-124.75-149.06-278.5 66.73-278.5 149.06-278.5 149.06 124.75 149.06 278.5zm124.61 0c0 142.94-29.29 258.84-65.44 258.84s-65.44-115.9-65.44-258.84 29.29-258.84 65.44-258.84 65.44 115.9 65.44 258.84z" />
             </svg>
           </a>
-          <a href="https://github.com/krishnamurthy-srinivasan" target="_blank" className="text-black dark:text-white"><Github size={28} /></a>
-          <a href="#" className="text-black dark:text-white font-semibold">X</a>
+          <a href="https://github.com/krishnamurthy-srinivasan" target="_blank" className="text-black dark:text-white hover:scale-110 transition-transform"><Github size={28} /></a>
+          <a href="#" className="text-black dark:text-white font-semibold hover:scale-110 transition-transform">X</a>
         </div>
       </section>
 
