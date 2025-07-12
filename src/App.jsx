@@ -27,10 +27,10 @@ export default function Portfolio() {
           Passionate about building efficient systems and continuous learning.
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
-          <span className="bg-green-600 text-white px-3 py-1 rounded">Open to Work</span>
-          <span className="bg-blue-900 text-white px-3 py-1 rounded">Prev: SDE @Autodesk, Infosys</span>
-          <span className="bg-blue-600 text-white px-3 py-1 rounded">Open to Freelancing / Consulting</span>
-          <span className="bg-orange-700 text-white px-3 py-1 rounded">Learning new tools regularly</span>
+          <span className="bg-green-600 text-white px-3 py-1 rounded transition duration-300 ease-in-out hover:bg-yellow-500">Open to Work</span>
+          <span className="bg-blue-900 text-white px-3 py-1 rounded transition duration-300 ease-in-out hover:bg-blue-700">SDE2 @Autodesk</span>
+          <span className="bg-blue-600 text-white px-3 py-1 rounded transition duration-300 ease-in-out hover:bg-blue-500">Open to Freelancing / Consulting</span>
+          <span className="bg-orange-700 text-white px-3 py-1 rounded transition duration-300 ease-in-out hover:bg-orange-600">Learning new tools regularly</span>
         </div>
       </section>
 
