@@ -16,7 +16,7 @@ export default function Portfolio() {
           <img
             src="/profile.jpg"
             alt="Profile"
-            className="w-28 h-28 rounded-full mb-4 animate-float shadow-lg shadow-black/40 dark:shadow-white/20"
+            className="w-28 h-28 rounded-xl mb-4 animate-float shadow-lg shadow-black/40 dark:shadow-white/20"
           />
           <p className="text-xl mb-1">Hi There! This is</p>
           <h1 className="text-3xl font-bold">
