@@ -10,10 +10,10 @@ export default function Portfolio() {
   }, [darkMode]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400 bg-[length:400%_400%] animate-gradient text-black dark:text-white px-6 py-10 relative">
+    <div className="min-h-screen bg-gradient-to-r from-gray-900 via-gray-300 to-gray-100 bg-[length:400%_400%] animate-gradient text-black dark:text-white px-6 py-10 relative overflow-hidden">
       <div className="max-w-5xl mx-auto">
-        <header className="flex justify-between items-center mb-10 flex-wrap gap-6">
-          <div className="flex-shrink-0">
+        <header className="flex justify-between items-center mb-10 flex-wrap md:flex-nowrap gap-6">
+          <div>
             <img
               src="/profile.jpg"
               alt="Profile"
@@ -31,7 +31,7 @@ export default function Portfolio() {
             </h1>
             <a
               href="#contact"
-              className="mt-4 inline-flex items-center gap-2 text-blue-800 dark:text-blue-300 hover:underline text-lg font-medium"
+              className="mt-4 inline-flex items-center gap-2 text-blue-600 hover:underline text-lg font-medium"
             >
               Let's Connect <ArrowDownCircle size={20} />
             </a>
@@ -60,7 +60,7 @@ export default function Portfolio() {
             <a
               href="/Krishna_Murthy_Srinivasan_Resume.pdf"
               download
-              className="animate-pulse flex items-center gap-2 bg-green-800 text-white px-5 py-3 rounded-full shadow-lg hover:bg-green-700"
+              className="animate-pulse flex items-center gap-2 bg-green-800 text-white px-5 py-3 rounded-full shadow-lg hover:bg-green-700 transition"
             >
               <FileText size={20} /> Resume
             </a>
@@ -69,7 +69,7 @@ export default function Portfolio() {
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold mb-6">Recent Projects</h2>
-          <p className="text-gray-700 dark:text-gray-300 italic">
+          <p className="text-gray-400 italic">
             Coming soon… currently working on exciting automation and AWS-based infrastructure projects.
           </p>
         </section>
@@ -77,9 +77,11 @@ export default function Portfolio() {
         <section className="mb-16">
           <h2 className="text-2xl font-semibold mb-6">Skills</h2>
           <div className="flex flex-wrap gap-2">
-            {[ 'Python', 'AWS', 'Docker', 'Kubernetes', 'Lambda', 'API Gateway', 'PostgreSQL', 'Cassandra',
+            {[
+              'Python', 'AWS', 'Docker', 'Kubernetes', 'Lambda', 'API Gateway', 'PostgreSQL', 'Cassandra',
               'Airflow', 'Grafana', 'Prometheus', 'Power Automate', 'FastAPI', 'Flask', 'Helm', 'Kafka',
-              'PySpark', 'Git/Github' ].map(skill => (
+              'PySpark', 'Git/Github'
+            ].map(skill => (
               <span key={skill} className="bg-gray-200 dark:bg-gray-800 text-sm px-3 py-1 rounded">
                 {skill}
               </span>
